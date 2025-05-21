@@ -2,7 +2,7 @@
 #include <winsock2.h>
 #include <conio.h>
 #include <windows.h>
-
+#include "function.h"
 #pragma comment(lib, "ws2_32.lib")
 
 using namespace std;
@@ -29,7 +29,7 @@ void clearInputLine() {
     cout << "\r                                                  \r";
 }
 
-void livechat() {
+void livechatServer() {
     WSADATA wsa;
     SOCKET server_socket, client_socket;
     sockaddr_in server_addr, client_addr;

@@ -20,5 +20,6 @@ string inputPassword() ;
 int studentmain();
 
 ///admin
-void adminDashboard();
-void facultyDashboard();
+int facultymain();
+
+void livechatServer();

@@ -4,7 +4,7 @@
 #include <conio.h>
 #include <limits>
 #include <windows.h>
-#include "function.h"
+#include "src/function.h"
 
 // #include <direct.h> // For _mkdir
 using namespace std;
@@ -242,11 +242,11 @@ int main()
         case 1:
             login();
             if (role == "student")
-                studentmain();
+                cout << "not added";
             else if (role == "faculty")
-                facultyDashboard();
+                facultymain();
             else if (role == "admin")
-                adminDashboard();
+                cout<< "not added";
 
             break;
         case 2:
