@@ -1,0 +1,1 @@
+//  g++ main.cpp src/lostAndFound.cpp src/smartmap.cpp src/complaint.cpp  src/notice.cpp src/chatbot.cpp -o a 

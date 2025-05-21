@@ -1,0 +1,144 @@
+hi|Hello Boss! How can I help you today?
+hello|Hello Boss! Hope you are doing well.
+how are you|I am doing great, thank you for asking!
+who are you|I am  B U B T I connect , your virtual assistant created to help you.
+what is your name|My name is  Bubt I connect .
+how can you help me|I can open websites, tell the time, and have a chat with you.
+what can you do|I can open YouTube, Google, Facebook, Codeforces, and answer your questions.
+tell me a joke|Why do not scientists trust atoms? Because they make up everything!
+what is the time|I can tell you the current time if you ask.
+what is today’s date|I can provide today’s date and time.
+open youtube|Opening YouTube for you.
+open google|Opening Google for you.
+open facebook|Opening Facebook for you.
+open codeforces|Opening Codeforces for you.
+thank you|You’re welcome, Boss!
+thanks|No problem, Boss!
+bye|Goodbye! Have a nice day!
+exit|Goodbye! See you later.
+stop|Chatbot stopped. Have a good day!
+what is programming|Programming is writing instructions for computers to perform tasks.
+what is c++|C++ is a powerful programming language used for system or software development.
+who created you|My master Mazidur, Riduwan  created me.
+how old are you|I am timeless, Boss.
+do you have feelings|I do not have feelings, but I am here to help you.
+can you learn|Not yet, but I can remember some answers from my file.
+are you smart|I try my best to be smart for you!
+what is ai|AI stands for Artificial Intelligence computers mimicking human intelligence.
+how is the weather today|I can not check weather yet, but you can ask Google for that.
+tell me about yourself|I am a virtual assistant designed to help with your tasks and questions.
+how do i code in c++|Start by learning syntax, variables, loops, functions, and practice a lot!
+can you open notepad|Please type open notepad to open Notepad.
+what documents are required for admission?|HSC/SSC Certificate (photocopy), HSC/SSC mark sheet, SSC registration card, NID or Birth Certificate, and 2 passport size photographs.
+what are the minimum requirements for applying in the undergraduate program?|GPA of at least 2.50 in both SSC and HSC or equivalent. Or GPA of 2.00 in either SSC or HSC but total must be 6.00. For O/A level: at least 4 subjects with B and 3 with C. Science with Math and Physics needed for CSE/EEE; Math, Physics, Chemistry for Textile/Civil. Various tuition fee waivers available.
+what is the tuition fee waiver for poor and meritorious students?|10% to 100% tuition fee waiver is available for poor and meritorious students.
+what is the tuition waiver based on cgpa?|2.5% to 10% tuition fee waiver is available based on CGPA.
+what is the tuition waiver based on ssc and hsc results?|5% to 100% tuition fee waiver is given based on SSC and HSC results.
+what is the tuition waiver for siblings?|25% waiver is given for each sibling studying at BUBT.
+what is the tuition waiver for gpa 3.80 to 3.90?|25% tuition fee waiver is available for GPA between 3.80 and 3.90.
+what is the tuition waiver for gpa 3.91 to 3.99?|50% tuition fee waiver is available for GPA between 3.91 and 3.99.
+what is the tuition waiver for gpa 4.00?|100% tuition fee waiver is available for GPA of 4.00 out of 4.00.
+what should i do if i miss pre-registration for a course?|You have to submit an application to the department chairman and get it approved. Then, submit it to the registration officer.
+how to get a library card?|You should bring a passport-sized photo to the librarian.
+what are the medical facilities in bubt campus?|There is a medical center on campus. You can get free first aid treatment, some medicines, and see a doctor.
+what types of services are available in medical first aid?|Emergency medical assistance, medicine dispensing, and consultation with an MBBS doctor.
+what types of services are available in medical equipment?|BP machine, weight machine, diabetic machine, hot water bag, oxygen cylinder, nebulization machine, suction machine, inhaler or cardiac inhaler, wheelchair, and stretcher.
+what types of services are available in medical medicines?|Medicines for fever, cold and cough, pain (headache, abdominal, muscle), acidity and vomiting, blood pressure management, burns and injuries (ointments/sprays), and dehydration (ORS, glucose).
+what is bubt|BUBT stands for Bangladesh University of Business and Technology.
+who is the vice chancellor of bubt|The Vice Chancellor of BUBT is Prof. Dr. A B M Shawkat Ali.
+where is bubt located|BUBT is located at Rupnagar, Mirpur-2, Dhaka-1216, Bangladesh.
+how can i contact bubt|You can call BUBT at +88029015397 or visit www.bubt.edu.bd for more info.
+how many faculties in bubt|BUBT has faculties including Engineering, Business, Arts, Law, and more.
+how to get transcript from bubt|Apply at the Controller's Office with a filled application form and pay the transcript fee.
+how to pay tuition fees|You can pay your tuition fees at the bank or through the university's online payment system.
+what is the minimum cgpa to avoid probation|You must maintain a minimum CGPA of 2.00 to avoid academic probation.
+how to apply for semester drop|Submit a formal application to the department with valid reasons and approval from authority.
+what is the class routine|You can find your class routine on the department notice board or university website.
+can you open calculator|Please type open calculator and I will open it for you.
+can you open notepad|Please type open notepad to open Notepad.
+can you open cmd|Please type open cmd to open the Command Prompt.
+can you shutdown the pc|I cannot shut down your PC for safety reasons.
+can you open browser|Please specify which browser to open: Chrome, Firefox, or Edge.
+tell me something funny|Why did the computer show up late to work? It had a hard drive!
+tell me a fun fact|Did you know? The first computer bug was an actual bug — a moth!
+sing a song|Sorry Boss, I can't sing, but I can play a tune for you someday!
+are you human|Nope! I am a digital assistant made to help you.
+do you sleep|No Boss, I am always here to assist you, 24/7.
+how to make a cv|Start with your name, contact, education, skills, and experience. Use clear formatting.
+where to find job circulars|Check websites like bdjobs.com or visit the BUBT Career Development Center.
+what is internship|An internship is a temporary job to gain experience before joining full-time work.
+how to get id card|After admission confirmation, visit the Registrar Office with a photo to collect your student ID card.
+how to get admit card|Download it from the BUBT website or collect it from the exam control office before exams.
+how to collect marksheet|Apply through the Controller of Exams office and pay the required fee.
+how to get clearance|Visit your department office and the accounts section to complete clearance procedures.
+how to drop a course|Submit a course drop form with proper reasons to your department before the deadline.
+is there wifi in campus|Yes, Wi-Fi is available in campus areas for students and faculty.
+is there a canteen in bubt|Yes, there is a canteen with snacks and meals at affordable prices.
+is there a common room|Yes, BUBT has separate common rooms for male and female students.
+what is available in computer lab|You can access internet, software tools, and lab courses in the computer lab.
+how to know exam routine|Exam routines are published on the BUBT website and notice boards.
+how to check my result|You can check your result on the student portal or contact the exam office.
+what happens if i fail a course|You will need to retake the course and pass it to complete your degree.
+what is the minimum attendance requirement|You must attend at least 75% of classes to be eligible for exams.
+what is make up exam|A makeup exam is for students who missed the regular exam for valid reasons.
+how to access bubt portal|Visit student.bubt.edu.bd and log in with your ID and password.
+i forgot my portal password|Contact the IT department or help desk to reset your student portal password.
+what is bubt student portal|It’s an online system where you can register, view results, and check notices.
+can i register courses online|Yes, course pre-registration is available through the BUBT portal.
+what waivers are available|Waivers are given based on merit, financial need, siblings, and results.
+how to apply for scholarship|Submit an application with your transcripts to the scholarship committee.
+can i get waiver if i do well|Yes, CGPA-based waivers are available each semester.
+what clubs are available in bubt|There are clubs for debate, programming, culture, business, and more.
+can i join any club|Yes, any student can join clubs by contacting the club coordinator.
+is there ragging in bubt|No, BUBT has a strict anti-ragging policy to ensure student safety.
+what is bubt|BUBT stands for Bangladesh University of Business and Technology, a private university established in 2003.
+who is the vice chancellor of bubt|The Vice Chancellor of BUBT is Prof. Dr. A B M Shawkat Ali.
+where is bubt located|BUBT is located at Rupnagar, Mirpur-2, Dhaka-1216, Bangladesh.
+how can i contact bubt|You can call BUBT at +88029015397 or visit www.bubt.edu.bd for more info.
+how many faculties in bubt|BUBT has faculties including Engineering, Business, Arts, Law, and more.
+when was bubt established|BUBT was established in 2003.
+what is the motto of bubt|The motto of BUBT is "Knowledge, Skills, and Attitude for the 21st Century."
+is bubt accredited|Yes, BUBT is accredited by UGC and the Government of Bangladesh.
+what undergraduate programs are offered|BUBT offers B.Sc. in CSE, EEE, Civil, Textile; BBA; and LLB (Hons).
+what postgraduate programs are offered|BUBT offers MBA, M.Sc. in CSE/EEE, and MA in English.
+does bubt have a library|Yes, BUBT has a library with 50,000+ books and e-resources.
+are there computer labs|Yes, BUBT has computer labs for CSE, EEE, and general use.
+does bubt have hostels|Yes, BUBT provides separate hostels for male and female students.
+is there a dress code|Yes, undergraduate students must follow the BUBT dress code.
+what is the attendance policy|Students must maintain 75% attendance to sit for exams.
+are there transport facilities|Yes, BUBT provides university buses for students and staff.
+does bubt offer scholarships|Yes, BUBT offers merit-based, need-based, and CGPA-based scholarships.
+how to apply for admission|Apply online via www.bubt.edu.bd with academic certificates and photos.
+what is the uniform color|The uniform color is specified by the department (e.g., navy blue for Engineering).
+are there research opportunities|Yes, students can participate in research projects under faculty guidance.
+does bubt have an auditorium|Yes, BUBT has a 1000+ capacity auditorium for events.
+are there cultural clubs|Yes, BUBT has cultural clubs, debate clubs, and programming clubs.
+how to join a club|Contact the club coordinator or visit the student affairs office.
+is ragging allowed|No, BUBT has a strict anti-ragging policy.
+what medical facilities are available|BUBT has a medical center with first aid, doctor consultations, and free medicines.
+how to check exam results|Results are available on the student portal or exam office notice board.
+what is the grading system|BUBT follows a 4.0 CGPA grading system.
+how to apply for transcripts|Submit an application to the Controller's Office with the required fee.
+are there internship opportunities|Yes, the Career Development Center assists with internships and job placements.
+does bubt have wifi|Yes, Wi-Fi is available across the campus for students.
+what is the language of instruction|The primary language of instruction is English.
+are there international collaborations|BUBT has collaborations with universities abroad for student exchanges.
+how to pay semester fees|Fees can be paid at designated banks or via the online payment system.
+what is the class duration|Each class typically lasts 1 hour and 20 minutes.
+are there sports facilities|Yes, BUBT has facilities for cricket, football, and indoor games.
+how to contact the registrar|Email registrar@bubt.edu.bd or visit the administrative office.
+what is the student-teacher ratio|The average ratio is 1:25 for personalized attention.
+are there part-time programs|Yes, BUBT offers evening MBA programs for working professionals.
+how to report grievances|Submit a written complaint to the student affairs office or use the online portal.
+what is the tuition fee waiver for gpa 5.00 in ssc/hsc|100% tuition fee waiver is available for GPA 5.00 in both SSC and HSC.
+what is the tuition waiver for cgpa 3.80 to 3.90|25% tuition fee waiver is available for CGPA between 3.80 and 3.90.
+what is the tuition waiver for cgpa 3.91 to 3.99|50% tuition fee waiver is available for CGPA between 3.91 and 3.99.
+what is the tuition waiver for cgpa 4.00|100% tuition fee waiver is available for CGPA of 4.00.
+what is the tuition waiver for siblings|25% tuition fee waiver is given for each sibling studying at BUBT.
+what special tuition waivers are available|Special tuition waivers are available for tribal students, disabled students, and freedom fighters' families.
+how to apply for merit-based waiver|Submit your SSC/HSC academic certificates with your admission application for merit-based waiver consideration.
+how to apply for cgpa-based waiver|Your CGPA-based waiver is automatically calculated each semester based on your academic performance.
+how to claim sibling waiver|Provide proof of relationship (birth certificates) and your sibling's student ID when applying for admission.
+what documents needed for special waivers|For special waivers, submit relevant certificates (tribal/disabled/freedom fighter documents) with your application.
+
+
