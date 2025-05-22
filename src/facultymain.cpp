@@ -39,6 +39,7 @@ int facultymain() {
     int choice;
 
     do {
+        printBanner();
         showMenu();
         cout << u8"\n➡️ Enter your choice: ";
         cin >> choice;

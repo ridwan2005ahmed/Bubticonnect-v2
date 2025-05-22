@@ -1,1 +1,1 @@
-//  g++ main.cpp src/facultymain.cpp src/notice.cpp src/chatbot.cpp src/server.cpp -lws2_32 -o myapp
+//  g++ main.cpp src/* -lws2_32 -o myapp

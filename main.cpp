@@ -10,28 +10,45 @@ using namespace std;
 
 const int SHIFT = 200;
 string role;
+void printBanner()
+{
+    cout << R"(  ____  _   _ ____ _____     ___      ____                            _   )" << '\n';
+    cout << R"( | __ )| | | | __ )_   _|   |_ _|    / ___|___  _ __  _ __   ___  ___| |_ )" << '\n';
+    cout << R"( |  _ \| | | |  _ \ | |      | |    | |   / _ \| '_ \| '_ \ / _ \/ __| __|)" << '\n';
+    cout << R"( | |_) | |_| | |_) || |      | |    | |__| (_) | | | | | | |  __/ (__| |_ )" << '\n';
+    cout << R"( |____/ \___/|____/ |_|     |___|    \____\___/|_| |_|_| |_|\___|\___|\__|)" << '\n';
+    cout << endl;
+}
 
 // Set full white background and readable text
-void setConsoleStyle() {
+void setConsoleStyle()
+{
     system("color F0"); // Background: White (F), Text: Black (0)
 }
 
 // Enable UTF-8 output in Windows Console
-void enableUTF8() {
+void enableUTF8()
+{
     SetConsoleOutputCP(CP_UTF8);
 }
 
 // Password input masking
-string inputPassword() {
+string inputPassword()
+{
     string password;
     char ch;
-    while ((ch = _getch()) != '\r') {
-        if (ch == '\b') {
-            if (!password.empty()) {
+    while ((ch = _getch()) != '\r')
+    {
+        if (ch == '\b')
+        {
+            if (!password.empty())
+            {
                 cout << "\b \b";
                 password.pop_back();
             }
-        } else {
+        }
+        else
+        {
             cout << '*';
             password += ch;
         }
@@ -41,35 +58,44 @@ string inputPassword() {
 }
 
 // ASCII shift encryption
-string encrypt(const string &password) {
+string encrypt(const string &password)
+{
     string encrypted = password;
-    for (char &ch : encrypted) ch += SHIFT;
+    for (char &ch : encrypted)
+        ch += SHIFT;
     return encrypted;
 }
 
 // ASCII shift decryption
-string decrypt(const string &password) {
+string decrypt(const string &password)
+{
     string decrypted = password;
-    for (char &ch : decrypted) ch -= SHIFT;
+    for (char &ch : decrypted)
+        ch -= SHIFT;
     return decrypted;
 }
 
-void studentDashboard(const string &username) {
-    cout << u8"\n🎓 Welcome, " << username << u8"! (Student Dashboard)\n";
+void studentDashboard(const string &username)
+{
+    studentmain();
 }
 
-void facultyDashboard(const string &username) {
+void facultyDashboard(const string &username)
+{
     facultymain(); // Moved logic into facultymain
 }
 
-void adminDashboard(const string &username) {
-    cout << u8"\n🛡️ Welcome, " << username << u8"! (Admin Dashboard)\n";
+void adminDashboard(const string &username)
+{
+    adminmain();
 }
 
 // Check for active session
-bool checkSession(string &username, string &userRole) {
+bool checkSession(string &username, string &userRole)
+{
     ifstream session("data/session.txt");
-    if (session.is_open()) {
+    if (session.is_open())
+    {
         getline(session, username);
         getline(session, userRole);
         session.close();
@@ -78,13 +104,16 @@ bool checkSession(string &username, string &userRole) {
     return false;
 }
 
-void saveSession(const string &username, const string &userRole) {
+void saveSession(const string &username, const string &userRole)
+{
     ofstream session("data/session.txt", ios::trunc);
-    session << username << '\n' << userRole;
+    session << username << '\n'
+            << userRole;
     session.close();
 }
 
-void registerUser() {
+void registerUser()
+{
     string username, password, userRole;
 
     cout << u8"📄 Enter username: ";
@@ -92,11 +121,14 @@ void registerUser() {
 
     ifstream infile("data/users.txt");
     string line;
-    while (getline(infile, line)) {
+    while (getline(infile, line))
+    {
         size_t p1 = line.find('|');
-        if (p1 == string::npos) continue;
+        if (p1 == string::npos)
+            continue;
         string u = line.substr(0, p1);
-        if (u == username) {
+        if (u == username)
+        {
             cout << u8"⚠️ Username already exists!\n";
             infile.close();
             return;
@@ -109,9 +141,11 @@ void registerUser() {
 
     cout << u8"👥 Select role (student / faculty / admin): ";
     cin >> userRole;
-    for (char &ch : userRole) ch = tolower(ch);
+    for (char &ch : userRole)
+        ch = tolower(ch);
 
-    if (userRole != "student" && userRole != "faculty" && userRole != "admin") {
+    if (userRole != "student" && userRole != "faculty" && userRole != "admin")
+    {
         cout << u8"❌ Invalid role.\n";
         return;
     }
@@ -124,12 +158,14 @@ void registerUser() {
     cout << u8"✅ Registered successfully!\n";
 }
 
-void login() {
+void login()
+{
     string username, password;
     int attempts = 0;
     const int MAX_ATTEMPTS = 3;
 
-    while (true) {
+    while (true)
+    {
         system("cls");
         cout << u8"👤 Username: ";
         cin >> username;
@@ -138,12 +174,15 @@ void login() {
         string line, fileUser, filePass, fileRole;
         bool userExists = false;
 
-        while (getline(file, line)) {
+        while (getline(file, line))
+        {
             size_t p1 = line.find('|');
             size_t p2 = line.rfind('|');
-            if (p1 == string::npos || p2 == string::npos || p1 == p2) continue;
+            if (p1 == string::npos || p2 == string::npos || p1 == p2)
+                continue;
             fileUser = line.substr(0, p1);
-            if (fileUser == username) {
+            if (fileUser == username)
+            {
                 filePass = line.substr(p1 + 1, p2 - p1 - 1);
                 fileRole = line.substr(p2 + 1);
                 userExists = true;
@@ -152,20 +191,23 @@ void login() {
         }
         file.close();
 
-        if (!userExists) {
+        if (!userExists)
+        {
             cout << u8"❌ Username not found! Redirecting to main menu...\n";
             Sleep(700);
             return;
         }
 
         attempts = 0;
-        while (attempts < MAX_ATTEMPTS) {
+        while (attempts < MAX_ATTEMPTS)
+        {
             system("cls");
             cout << u8"🔒 Password: ";
             password = inputPassword();
             string encryptedInput = encrypt(password);
 
-            if (filePass == encryptedInput) {
+            if (filePass == encryptedInput)
+            {
                 cout << u8"✅ Login successful!\n";
                 saveSession(username, fileRole);
                 Sleep(1000);
@@ -179,12 +221,16 @@ void login() {
                 else
                     cout << u8"⚠️ Unknown role.\n";
                 return;
-            } else {
+            }
+            else
+            {
                 attempts++;
                 cout << u8"❌ Wrong password. Attempts left: " << (MAX_ATTEMPTS - attempts) << "\n";
                 Sleep(1500);
-                if (attempts == MAX_ATTEMPTS) {
-                    for (int i = 30; i >= 1; --i) {
+                if (attempts == MAX_ATTEMPTS)
+                {
+                    for (int i = 30; i >= 1; --i)
+                    {
                         system("cls");
                         cout << u8"⏳ Too many failed attempts. Please wait: " << i << " seconds...\n";
                         Sleep(1000);
@@ -195,22 +241,23 @@ void login() {
     }
 }
 
-void displayMenu() {
-    cout << u8"==============================" << endl;
-    cout << u8"   🎓 Welcome to BUBT iConnect" << endl;
-    cout << u8"==============================" << endl;
-    cout << u8"1. 🔐 Login" << endl;
+void displayMenu()
+{
+    printBanner();
+    cout<< u8"1. 🔐 Login" << endl;
     cout << u8"2. 📝 Register" << endl;
     cout << u8"3. ❌ Exit" << endl;
     cout << u8"------------------------------" << endl;
 }
 
-int main() {
+int main()
+{
     enableUTF8();
     setConsoleStyle();
 
     string username, userRole;
-    if (checkSession(username, userRole)) {
+    if (checkSession(username, userRole))
+    {
         cout << u8"🔓 Logged in as " << username << " (" << userRole << ")" << endl;
         Sleep(1500);
         system("cls");
@@ -225,7 +272,8 @@ int main() {
         return 0;
     }
 
-    while (true) {
+    while (true)
+    {
         displayMenu();
 
         int choice;
@@ -234,18 +282,19 @@ int main() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         system("cls");
 
-        switch (choice) {
-            case 1:
-                login();
-                break;
-            case 2:
-                registerUser();
-                break;
-            case 3:
-                cout << u8"👋 Goodbye!\n";
-                return 0;
-            default:
-                cout << u8"❌ Invalid choice!\n";
+        switch (choice)
+        {
+        case 1:
+            login();
+            break;
+        case 2:
+            cout << "contact with admin" << endl;
+            break;
+        case 3:
+            cout << u8"👋 Goodbye!\n";
+            return 0;
+        default:
+            cout << u8"❌ Invalid choice!\n";
         }
 
         system("pause");

@@ -3,3 +3,5 @@ adad|שתûü|student
 99||student
 44|üü|admin
 mazid70|שתûü|faculty
+admin|),516|admin
+nope|678-|student

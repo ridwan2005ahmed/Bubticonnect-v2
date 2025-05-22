@@ -6,52 +6,8 @@
 // Add declarations for setColor and drawLine if not already present in function.h
 void setColor(int textColor, int bgColor);
 void drawLine(char ch, int length);
-
 using namespace std;
 #define nx "\n"
-
-
-
-int options;
-
-void addnotice();
-void shownotice();
-void show_imp_notice();
-
-void notice() {
-    do {
-        cout << "1. Show Notice" << nx;
-        cout << "2. Add Notice" << nx;
-        cout << "0. Back to Main Menu\n";
-        cout << "Choose an options: ";
-        cin >> options;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-        system("cls");
-
-        switch (options) {
-            case 1:
-                shownotice();
-                break;
-            case 2:
-                addnotice();
-                break;
-            case 0:
-                cout << "Returning to main menu..." << nx;
-                break;
-            default:
-                cout << "--------------------Wrong input--------------------" << nx;
-                cout << "----------Please enter the correct number----------" << nx;
-        }
-
-        if (options != 0) {
-            cout << "\nPress Enter to continue...";
-            cin.get();
-            system("cls");
-        }
-    } while (options != 0);
-}
-
 void shownotice() {
     ifstream file("data/notice.txt");
     string line;
@@ -73,34 +29,7 @@ void shownotice() {
 }
 
 void addnotice() {
-    string pass = "1234";
-    string password;
-    int attempts = 0;
-    const int maxAttempts = 3;
-
-    while (attempts < maxAttempts) {
-        cout << "Enter Password: ";
-        password = inputPassword(); // This function must be defined in function.h
-        system("cls");
-
-        if (password == pass) {
-            break;
-        } else {
-            attempts++;
-            if (attempts < maxAttempts) {
-                cout << "Wrong Password (" << attempts << "/" << maxAttempts << ")\n";
-            }
-        }
-    }
-
-    if (attempts == maxAttempts) {
-        for (int i = 30; i >= 1; --i) {
-            cout << "\rToo many failed attempts. Please wait " << i << " seconds... ";
-            Sleep(1000);
-        }
-        system("cls");
-        return;
-    }
+    
 
     string title, describe;
 

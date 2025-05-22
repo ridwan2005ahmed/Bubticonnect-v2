@@ -6,7 +6,7 @@ using namespace std;
 
 void complaint();
 
-string inputPassword();
+string inputcPassword();
 int option;
 void addcomplaint();
 void showcomplaint();
@@ -80,38 +80,7 @@ void addcomplaint() {
 }
 
 void showcomplaint() {
-    string pass = "1234";
-    string password;
-    int attempts = 0;
-    const int maxAttempts = 3;
-
-    while (attempts < maxAttempts) {
-        cout << "Enter Password: ";
-        password = inputPassword();
-        system("cls");
-
-        if (password == pass) {
-            break;  // Correct password
-        } else {
-            attempts++;
-            if (attempts < maxAttempts) {
-                cout << "Wrong Password (" << attempts << "/" << maxAttempts << ")\n";
-            }
-        }
-    }
-
-    if (attempts == maxAttempts) {
-
-        for (int i = 30; i >= 1; --i) {
-            cout << "\rToo many failed attempts. Please wait " << i << " seconds... ";
-            Sleep(1000); // wait for 1 second
-            
-        }
-        system("cls");
-        return;  // Exit without showing complaints
-    }
-
-    // Password was correct – show complaints
+   
     ifstream file("data/complaint.txt");
     string line;
     cout << left << setw(50) << "Title"
@@ -132,7 +101,7 @@ void showcomplaint() {
     file.close();
 }
 
-string inputPassword() {
+string inputcPassword() {
     string password;
     char ch;
 

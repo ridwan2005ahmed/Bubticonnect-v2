@@ -9,23 +9,25 @@
 using namespace std;
 
 // Color codes
-#define COLOR_YOU 10      // Green
-#define COLOR_THEIRS 11   // Cyan
-#define COLOR_SYSTEM 12   // Red
-#define COLOR_RESET 7     // Default
-
+#define COLOR_YOU 1    // Dark Blue
+#define COLOR_THEIRS 2 // Dark Green
+#define COLOR_SYSTEM 4 // Dark Red
+#define COLOR_RESET 0
 // Constants
 const int BUFFER_SIZE = 4096;
 const int PORT = 8080;
 
-void setColor(int color) {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+void setcliColor(int textColor)
+{
+    // White background = 15 (0xF)
+    // Shift background color 4 bits left, OR with textColor
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (15 << 4) | textColor);
 }
 
 void printMessage(const string& sender, const string& msg, int color) {
-    setColor(color);
+    setcliColor(color);
     cout << sender << ": " << msg << endl;
-    setColor(COLOR_RESET);
+    setcliColor(COLOR_RESET);
 }
 
 void clearScreen() {
@@ -33,16 +35,16 @@ void clearScreen() {
 }
 
 void displayWelcome() {
-    setColor(COLOR_SYSTEM);
+    setcliColor(COLOR_SYSTEM);
     cout << "=== Simple Chat Client ===" << endl;
     cout << "Commands:" << endl;
     cout << "/exit - Quit the program" << endl;
     cout << "/clear - Clear the screen" << endl;
-    setColor(COLOR_RESET);
+    setcliColor(COLOR_RESET);
     cout << endl;
 }
 
-int main() {
+int clientmain() {
     WSADATA wsa;
     SOCKET sock;
     sockaddr_in server;
@@ -64,9 +66,9 @@ int main() {
 
     // Get server IP
     string ip;
-    setColor(COLOR_SYSTEM);
+    setcliColor(COLOR_SYSTEM);
     cout << "Enter server IP (default 127.0.0.1): ";
-    setColor(COLOR_RESET);
+    setcliColor(COLOR_RESET);
     getline(cin, ip);
     if (ip.empty()) ip = "127.0.0.1";
 
@@ -76,9 +78,9 @@ int main() {
     server.sin_port = htons(PORT);
 
     // Connect to server
-    setColor(COLOR_SYSTEM);
+    setcliColor(COLOR_SYSTEM);
     cout << "Connecting to " << ip << "..." << endl;
-    setColor(COLOR_RESET);
+    setcliColor(COLOR_RESET);
 
     if (connect(sock, (sockaddr*)&server, sizeof(server)) < 0) {
         cerr << "Connection failed: " << WSAGetLastError() << endl;
@@ -97,9 +99,9 @@ int main() {
     printMessage("System", "Connected to server!", COLOR_SYSTEM);
 
     // Initial input prompt
-    setColor(COLOR_YOU);
+    setcliColor(COLOR_YOU);
     cout << "You> ";
-    setColor(COLOR_RESET);
+    setcliColor(COLOR_RESET);
 
     while (true) {
         // Receive messages from server
@@ -114,9 +116,9 @@ int main() {
             printMessage("Server", buffer, COLOR_THEIRS);
 
             // Reprint input prompt and restore buffer
-            setColor(COLOR_YOU);
+            setcliColor(COLOR_YOU);
             cout << "You> " << inputBuffer;
-            setColor(COLOR_RESET);
+            setcliColor(COLOR_RESET);
         }
         else if (bytesReceived == 0) {
             printMessage("System", "Server disconnected", COLOR_SYSTEM);
@@ -156,16 +158,16 @@ int main() {
                 }
 
                 // Reprint prompt
-                setColor(COLOR_YOU);
+                setcliColor(COLOR_YOU);
                 cout << "You> ";
-                setColor(COLOR_RESET);
+                setcliColor(COLOR_RESET);
             }
             // Printable characters
             else if (ch >= 32 && ch <= 126) {
                 inputBuffer += ch;
-                setColor(COLOR_YOU);
+                setcliColor(COLOR_YOU);
                 cout << ch;
-                setColor(COLOR_RESET);
+                setcliColor(COLOR_RESET);
             }
         }
 
