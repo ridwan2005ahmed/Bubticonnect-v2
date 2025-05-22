@@ -2,3 +2,8 @@ adad|שתûü|student
 5|ת|admin
 99||student
 44|üü|admin
+mazid70|שתûü|faculty
+admin|),516|admin
+nope|678-|student
+ridu|שתûü|faculty
+d|,|admin

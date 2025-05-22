@@ -6,44 +6,11 @@ using namespace std;
 
 void complaint();
 
-string inputPassword();
+string inputcPassword();
 int option;
 void addcomplaint();
 void showcomplaint();
 
-void complaint() {
-    do {
-        cout << "1.Add Complaint" << nx;
-        cout << "2.Show Complaint" << nx;
-        cout << "0. Back to Main Menu\n"; 
-        cout << "Choose an option: ";
-        cin >> option;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear input buffer
-
-        system("cls"); // clear screen after each selection
-
-        switch (option) {
-        case 1:
-            addcomplaint();
-            break;
-        case 2:
-            showcomplaint();
-            break;
-        case 0:
-            cout << "Returning to main menu..." << nx;
-            break;
-        default:
-            cout << "--------------------Wrong input--------------------" << nx;
-            cout << "----------Please enter the correct number----------" << nx;
-        }
-
-        if (option != 0) {
-            cout << "\nPress Enter to continue...";
-            cin.get(); // Wait for Enter
-            system("cls");
-        }
-    } while (option != 0);
-}
 
 string encrypt(string data) {
     for (auto &ch : data) {
@@ -80,38 +47,7 @@ void addcomplaint() {
 }
 
 void showcomplaint() {
-    string pass = "1234";
-    string password;
-    int attempts = 0;
-    const int maxAttempts = 3;
-
-    while (attempts < maxAttempts) {
-        cout << "Enter Password: ";
-        password = inputPassword();
-        system("cls");
-
-        if (password == pass) {
-            break;  // Correct password
-        } else {
-            attempts++;
-            if (attempts < maxAttempts) {
-                cout << "Wrong Password (" << attempts << "/" << maxAttempts << ")\n";
-            }
-        }
-    }
-
-    if (attempts == maxAttempts) {
-
-        for (int i = 30; i >= 1; --i) {
-            cout << "\rToo many failed attempts. Please wait " << i << " seconds... ";
-            Sleep(1000); // wait for 1 second
-            
-        }
-        system("cls");
-        return;  // Exit without showing complaints
-    }
-
-    // Password was correct – show complaints
+   
     ifstream file("data/complaint.txt");
     string line;
     cout << left << setw(50) << "Title"
@@ -121,18 +57,18 @@ void showcomplaint() {
     while (getline(file, line)) {
         stringstream ss(line);
         string title, description;
-        getline(ss, title, '|');
-        getline(ss, description, '|');
-        title = decrypt(title);
-        description = decrypt(description);
-        cout << left << setw(50) << title
-             << "| " << left << setw(50) << description << '\n';
+        if (getline(ss, title, '|') && getline(ss, description, '|')) {
+            title = decrypt(title);
+            description = decrypt(description);
+            cout << left << setw(50) << title
+                 << "| " << left << setw(50) << description << '\n';
+        }
     }
 
     file.close();
 }
 
-string inputPassword() {
+string inputcPassword() {
     string password;
     char ch;
 
@@ -156,3 +92,6 @@ string inputPassword() {
 
     return password;
 }
+
+
+

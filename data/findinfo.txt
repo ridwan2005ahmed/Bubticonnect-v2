@@ -1,4 +1,3 @@
 mim|0234|mirpurwatch|02252262526|muktagacha
-kkk|655|mjh
-tayef|02225554|bathroom
-shanto|0222|wadhroom
+tayef|02225554|room
+shanto|0222|room

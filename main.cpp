@@ -6,10 +6,25 @@
 #include <windows.h>
 #include "src/function.h"
 
-// #include <direct.h> // For _mkdir
 using namespace std;
 
 const int SHIFT = 200;
+string role;
+void printBanner()
+{
+    cout << R"(  ____  _   _ ____ _____     ___      ____                            _   )" << '\n';
+    cout << R"( | __ )| | | | __ )_   _|   |_ _|    / ___|___  _ __  _ __   ___  ___| |_ )" << '\n';
+    cout << R"( |  _ \| | | |  _ \ | |      | |    | |   / _ \| '_ \| '_ \ / _ \/ __| __|)" << '\n';
+    cout << R"( | |_) | |_| | |_) || |      | |    | |__| (_) | | | | | | |  __/ (__| |_ )" << '\n';
+    cout << R"( |____/ \___/|____/ |_|     |___|    \____\___/|_| |_|_| |_|\___|\___|\__|)" << '\n';
+    cout << endl;
+}
+
+// Set full white background and readable text
+void setConsoleStyle()
+{
+    system("color F0"); // Background: White (F), Text: Black (0)
+}
 
 // Enable UTF-8 output in Windows Console
 void enableUTF8()
@@ -23,9 +38,9 @@ string inputPassword()
     string password;
     char ch;
     while ((ch = _getch()) != '\r')
-    { // Until Enter is pressed
+    {
         if (ch == '\b')
-        { // Backspace
+        {
             if (!password.empty())
             {
                 cout << "\b \b";
@@ -42,47 +57,64 @@ string inputPassword()
     return password;
 }
 
-// Simple ASCII-shift encrypt
+// ASCII shift encryption
 string encrypt(const string &password)
 {
     string encrypted = password;
     for (char &ch : encrypted)
-    {
         ch += SHIFT;
-    }
     return encrypted;
 }
 
-// Simple ASCII-shift decrypt
+// ASCII shift decryption
 string decrypt(const string &password)
 {
     string decrypted = password;
     for (char &ch : decrypted)
-    {
         ch -= SHIFT;
-    }
     return decrypted;
 }
 
-// Dashboards
 void studentDashboard(const string &username)
 {
-    cout << u8"\n🎓 Welcome, " << username << u8"! (Student Dashboard)\n";
+    studentmain();
 }
+
 void facultyDashboard(const string &username)
 {
-    cout << u8"\n👨‍🏫 Welcome, " << username << u8"! (Faculty Dashboard)\n";
+    facultymain(); // Moved logic into facultymain
 }
+
 void adminDashboard(const string &username)
 {
-    cout << u8"\n🛡️ Welcome, " << username << u8"! (Admin Dashboard)\n";
+    adminmain();
+}
+
+// Check for active session
+bool checkSession(string &username, string &userRole)
+{
+    ifstream session("data/session.txt");
+    if (session.is_open())
+    {
+        getline(session, username);
+        getline(session, userRole);
+        session.close();
+        return !username.empty() && !userRole.empty();
+    }
+    return false;
+}
+
+void saveSession(const string &username, const string &userRole)
+{
+    ofstream session("data/session.txt", ios::trunc);
+    session << username << '\n'
+            << userRole;
+    session.close();
 }
 
 void registerUser()
 {
-    //_mkdir("data");
-
-    string username, password, role;
+    string username, password, userRole;
 
     cout << u8"📄 Enter username: ";
     cin >> username;
@@ -108,26 +140,24 @@ void registerUser()
     password = inputPassword();
 
     cout << u8"👥 Select role (student / faculty / admin): ";
-    cin >> role;
-
-    for (char &ch : role)
+    cin >> userRole;
+    for (char &ch : userRole)
         ch = tolower(ch);
-    if (role != "student" && role != "faculty" && role != "admin")
+
+    if (userRole != "student" && userRole != "faculty" && userRole != "admin")
     {
         cout << u8"❌ Invalid role.\n";
         return;
     }
 
     string encryptedPass = encrypt(password);
-
     ofstream file("data/users.txt", ios::app);
-    file << username << "|" << encryptedPass << "|" << role << endl;
+    file << username << "|" << encryptedPass << "|" << userRole << endl;
     file.close();
 
     cout << u8"✅ Registered successfully!\n";
 }
 
-string role;
 void login()
 {
     string username, password;
@@ -155,7 +185,6 @@ void login()
             {
                 filePass = line.substr(p1 + 1, p2 - p1 - 1);
                 fileRole = line.substr(p2 + 1);
-                fileRole = role;
                 userExists = true;
                 break;
             }
@@ -166,7 +195,7 @@ void login()
         {
             cout << u8"❌ Username not found! Redirecting to main menu...\n";
             Sleep(700);
-            return; // Return to main menu
+            return;
         }
 
         attempts = 0;
@@ -180,7 +209,9 @@ void login()
             if (filePass == encryptedInput)
             {
                 cout << u8"✅ Login successful!\n";
+                saveSession(username, fileRole);
                 Sleep(1000);
+
                 if (fileRole == "student")
                     studentDashboard(username);
                 else if (fileRole == "faculty")
@@ -196,7 +227,6 @@ void login()
                 attempts++;
                 cout << u8"❌ Wrong password. Attempts left: " << (MAX_ATTEMPTS - attempts) << "\n";
                 Sleep(1500);
-
                 if (attempts == MAX_ATTEMPTS)
                 {
                     for (int i = 30; i >= 1; --i)
@@ -205,7 +235,6 @@ void login()
                         cout << u8"⏳ Too many failed attempts. Please wait: " << i << " seconds...\n";
                         Sleep(1000);
                     }
-                    system("cls");
                 }
             }
         }
@@ -214,10 +243,8 @@ void login()
 
 void displayMenu()
 {
-    cout << u8"==============================" << endl;
-    cout << u8"   🎓 Welcome to BUBT iConnect" << endl;
-    cout << u8"==============================" << endl;
-    cout << u8"1. 🔐 Login" << endl;
+    printBanner();
+    cout<< u8"1. 🔐 Login" << endl;
     cout << u8"2. 📝 Register" << endl;
     cout << u8"3. ❌ Exit" << endl;
     cout << u8"------------------------------" << endl;
@@ -226,6 +253,24 @@ void displayMenu()
 int main()
 {
     enableUTF8();
+    setConsoleStyle();
+
+    string username, userRole;
+    if (checkSession(username, userRole))
+    {
+        cout << u8"🔓 Logged in as " << username << " (" << userRole << ")" << endl;
+        Sleep(1500);
+        system("cls");
+        if (userRole == "student")
+            studentDashboard(username);
+        else if (userRole == "faculty")
+            facultyDashboard(username);
+        else if (userRole == "admin")
+            adminDashboard(username);
+        else
+            cout << u8"⚠️ Unknown role in session!\n";
+        return 0;
+    }
 
     while (true)
     {
@@ -241,16 +286,9 @@ int main()
         {
         case 1:
             login();
-            if (role == "student")
-                cout << "not added";
-            else if (role == "faculty")
-                facultymain();
-            else if (role == "admin")
-                cout<< "not added";
-
             break;
         case 2:
-            registerUser();
+            cout << "contact with admin" << endl;
             break;
         case 3:
             cout << u8"👋 Goodbye!\n";

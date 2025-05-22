@@ -140,5 +140,77 @@ how to apply for merit-based waiver|Submit your SSC/HSC academic certificates wi
 how to apply for cgpa-based waiver|Your CGPA-based waiver is automatically calculated each semester based on your academic performance.
 how to claim sibling waiver|Provide proof of relationship (birth certificates) and your sibling's student ID when applying for admission.
 what documents needed for special waivers|For special waivers, submit relevant certificates (tribal/disabled/freedom fighter documents) with your application.
-
+vc contact|Prof. Dr. A B M Shawkat Ali is the Vice Chancellor of BUBT. You can email him at vc@bubt.edu.bd.
+chairman cse|Md. Saifur Rahman is the Chairman of the CSE Department. Email: saifurs@gmail.com, Office: Room 308, Building B-1.
+dean cse|Abul Lais M. S. Haque is the Dean and Professor of the CSE Department.
+ashraful islam contact|Md Ashraful Islam is an Assistant Professor. Room: 314, Building B-1. Phone: 01723777711, Email: ashraful@bubt.edu.bd.
+maruf billah contact|Maruf Billah is a Lecturer in the CSE Department. Email: marufbillah@bubt.edu.bd, Office: MTA/407.
+library location|The library is located in Building-3, 2nd floor.
+reading room location|Reading rooms are on the 3rd floor of Building-3.
+medical center location|The Medical Center is in Room 205, Building-3.
+center prayer room|The center prayer room is located in the basement of Building-3.
+cp lab location|The Competitive Programming Lab is in Room 504, Building-3.
+it unit location|The IT Unit is in Room 521, Building-2.
+digital electronics lab|It is located in Room 506, Building-3.
+iot lab location|The IOT Lab is in Room 507, Building-3.
+it club location|The IT Club is in Room 501, Building-3.
+iqac office location|IQAC Office is in Room 219, Building-2.
+exam controller location|Examination Controller Office is on the 1st floor of Building-3.
+bubt trust office|Located in Room 221, Building-2.
+meeting room location|Meeting Room is in Room 220, Building-2.
+conference hall location|International Conference Hall is on the 9th floor of Building-2.
+system programming lab|Room 518, Building-2.
+creative computing lab 1|Room 520, Building-2.
+chairman textile location|Room 703, Building-3.
+chairman civil location|Room 803, Building-3.
+robotics lab|Microprocessor & Robotics Lab is in Room 505, Building-3.
+computer lab location|Room 620, Building-2.
+creative computing lab 3|Room 217, Building-2.
+vlsi lab|Computer Simulation & VLSI Lab is in Room 218, Building-2.
+networking lab|Networking and Mobile System Lab is in Room 416, Building-2.
+data analysis lab|Data Management and Analysis Lab is in Room 417, Building-2.
+software engineering lab|Software Engineering and System Design Lab is in Room 418, Building-2.
+web programming lab|Internet Technology and Web Programming Lab is in Room 419, Building-2.
+algorithm lab|Algorithm and Problem Solving Lab & Networking and Mobile System Lab is in Room 420, Building-2.
+ai lab|Artificial Intelligence and Computer Vision Lab is in Room 517, Building-2.
+vlsi design lab|Microprocessor and Interfacing Lab & VLSI Design Lab is in Room 619, Building-2.
+chairman eee location|Room 603, Building-3.
+reception location|Ground Floor.
+admission office location|Information & Admission Unit is on the Ground Floor.
+admin offices|Located on the 1st Floor (VC, Advisor, Treasurer, Registrar, Accounts).
+trust members location|Room 309, Building-1.
+dean engineering location|Room 201, Building-1.
+dean arts location|Room 408, Building-1.
+dean law location|Room 507, Building-1.
+chairman english location|Room 406, Building-1.
+chairman law location|Room 505, Building-1.
+chairman economics location|Room 703, Building-1.
+proctor office location|Room 603, Building-1.
+hr unit location|Room 304, Building-1.
+public relation office|Room 210, Building-1.
+labs building 1|Workshop, Chemistry, Apparel Labs in Room 108 & Room 801, Building-1.
+gaming testing lab|Room 301, Building-1.
+mechanics lab|Structural Mechanics & Engineering Materials Lab in Room 106, Building-1.
+language lab|Room 401, Building-1.
+female prayer room building 1|Room 310, Building-1.
+female common room building 1|Room 311, Building-1.
+registration office|Room 102, Building-3.
+psychologist location|Mou Juliet is on Ground Floor, Building-3. Available Sun–Thu, 9AM–5PM.
+dean business location|Room 802, Building-4, 8th Floor.
+director mba location|Room 602, Building-4, 6th Floor.
+chairman management location|Room 902, Building-4, 9th Floor.
+chairman marketing location|Room 706, Building-4, 9th Floor.
+chairman accounting location|Room 606, Building-4, 6th Floor.
+chairman finance location|Room 507, Building-4, 5th Floor.
+chairman math location|Room 406, Building-4, 4th Floor.
+career guidance office|Room 103, Building-4.
+computer lab building 4|Room 301, Building-4.
+engineering unit location|Room 104, Building-4.
+tiffin lounge location|Faculty Tiffin Corner & Lounge on 1st Floor, Building-4.
+it store location|Room 101, Building-4.
+female common room building 4|Room 401, Building-4.
+female prayer room building 4|Room 402, Building-4.
+bncc room|Room 102, Ground Floor, Building-4.
+all club room|9th Floor, Building-4.
+alumni association office|Room 1101, Building-4.
 
