@@ -1,1 +1,1 @@
-//  g++ main.cpp src/lostAndFound.cpp src/smartmap.cpp src/complaint.cpp  src/notice.cpp src/chatbot.cpp -o a 
+//  g++ main.cpp src/facultymain.cpp src/notice.cpp src/chatbot.cpp src/server.cpp -lws2_32 -o myapp

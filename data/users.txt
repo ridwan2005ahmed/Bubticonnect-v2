@@ -2,3 +2,4 @@ adad|שתûü|student
 5|ת|admin
 99||student
 44|üü|admin
+mazid70|שתûü|faculty

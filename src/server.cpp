@@ -15,8 +15,10 @@ using namespace std;
 #define COLOR_SYSTEM 12   // Red
 #define COLOR_RESET 7     // Default
 
-void setColor(int color) {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+void setColor(int textColor) {
+    // White background = 15 (0xF)
+    // Shift background color 4 bits left, OR with textColor
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (15 << 4) | textColor);
 }
 
 void printMessage(const string& sender, const string& msg, int color) {
